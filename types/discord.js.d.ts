@@ -1,12 +1,8 @@
-import { I18n } from "i18n";
+import { Collection } from "discord.js";
 
 declare module "discord.js" {
   interface Client {
     commands: Collection<string, any>;
     connectionTimeout: ReturnType<typeof setTimeout>;
   }
-
-  interface CommandInteraction extends I18n {
-    version: any;
-  }
-};
+}
